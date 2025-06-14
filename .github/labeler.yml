@@ -4,9 +4,13 @@ enhancement:
           - "**"
       - all-globs-to-all-files:
           - "!**/*.md"
+      - all-globs-to-all-files:
           - "!assets/**"
+      - all-globs-to-all-files:
           - "!tests/**"
+      - all-globs-to-all-files:
           - "!addons/**"
+      - all-globs-to-all-files:
           - "!.github/**"
 assets:
   - changed-files:
