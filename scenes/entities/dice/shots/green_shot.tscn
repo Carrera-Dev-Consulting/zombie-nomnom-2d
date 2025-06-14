@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtm67nsyr4lsp"]
+
+[ext_resource type="Texture2D" uid="uid://r4ob3y647hy8" path="res://assets/sprites/dice/shotgun_dice.png" id="1_0musr"]
+
+[node name="green" type="Sprite2D"]
+texture = ExtResource("1_0musr")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)

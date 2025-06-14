@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cikp85rdru62q"]
+
+[ext_resource type="Texture2D" uid="uid://cn3cid1w6il6y" path="res://assets/sprites/dice/run_dice.png" id="1_0hplx"]
+
+[node name="yellow" type="Sprite2D"]
+texture = ExtResource("1_0hplx")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)

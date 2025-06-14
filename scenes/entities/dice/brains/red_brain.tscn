@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm2e7e117lvr7"]
+
+[ext_resource type="Texture2D" uid="uid://dyho5dxhvxq7g" path="res://assets/sprites/dice/brain_dice.png" id="1_g6atv"]
+
+[node name="red" type="Sprite2D"]
+texture = ExtResource("1_g6atv")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 32)
