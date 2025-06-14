@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdadbppsq2ayu"]
+
+[ext_resource type="Script" uid="uid://w6knjv1ahctl" path="res://scenes/layouts/test_roll_die/main.gd" id="1_7tufj"]
+[ext_resource type="PackedScene" uid="uid://ho6cycahvuei" path="res://scenes/entities/dice/dice.tscn" id="2_5fnuh"]
+[ext_resource type="PackedScene" uid="uid://cceqvceahr2er" path="res://scenes/entities/dice/brains/green_brain.tscn" id="3_5qusl"]
+
+[sub_resource type="SystemFont" id="SystemFont_fs6nf"]
+font_names = PackedStringArray("Consolas")
+font_weight = 999
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_7tufj")
+
+[node name="dice" parent="." instance=ExtResource("2_5fnuh")]
+unique_name_in_owner = true
+position = Vector2(-669, -369)
+scale = Vector2(10.067, 10.067)
+one_shot = true
+face = ExtResource("3_5qusl")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-577, -322)
+
+[node name="Button" type="Button" parent="."]
+offset_left = -335.0
+offset_top = -171.0
+offset_right = 11.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.779595, 0.779595)
+theme_override_fonts/font = SubResource("SystemFont_fs6nf")
+theme_override_font_sizes/font_size = 64
+text = "Roll Die"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
