@@ -47,6 +47,8 @@ func roll(new_face: PackedScene):
 	is_rolling = true
 	if new_face:
 		var callback := change_face.bind(new_face)
+		# disconnect the dangling callback from last roll
 		if finished_rolling.is_connected(callback):
 			finished_rolling.disconnect(callback)
+		# register to modify only after the roll is finished
 		finished_rolling.connect(callback)
