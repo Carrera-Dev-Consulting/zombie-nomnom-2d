@@ -5,5 +5,5 @@ extends Node2D
 
 func _on_button_pressed() -> void:
 	var choice := randi() % die_face.size()
-	print(choice, die_face[choice])
+	print(choice,' ', die_face[choice].resource_path)
 	die.roll(die_face[choice])
