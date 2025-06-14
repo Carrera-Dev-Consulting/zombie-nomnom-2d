@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        "file:///c%3A/Users/andre/.vscode/extensions/atlassian.atlascode-3.0.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
+        "https://json.schemastore.org/pull-request-labeler-5.json": "file:///c%3A/Users/andre/dev/games/zombie-nom-nom-2d/.github/labeler.yml"
+    }
+}
