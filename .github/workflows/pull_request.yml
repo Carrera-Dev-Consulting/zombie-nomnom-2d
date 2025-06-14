@@ -21,6 +21,7 @@ jobs:
           # how long tests can run in seconds
           test-timeout: "60"
           minimum-pass: "1.0"
+          custom-godot-dl-url: "https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux.x86_64.zip"
           result-output-file: "test_results.xml"
       - uses: actions/upload-artifact@v4
         with:
