@@ -15,9 +15,11 @@ fill_from = Vector2(0.447826, 0.0173913)
 
 [sub_resource type="SystemFont" id="SystemFont_si6nn"]
 font_names = PackedStringArray("Consolas")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_fw67w"]
 font_names = PackedStringArray("Consolas")
+subpixel_positioning = 0
 
 [node name="Game" type="Node" node_paths=PackedStringArray("hand_dice", "dice_container", "score_label")]
 script = ExtResource("1_te8yy")
@@ -84,6 +86,9 @@ offset_bottom = 82.0
 theme_override_fonts/font = SubResource("SystemFont_fw67w")
 theme_override_font_sizes/font_size = 64
 text = "Score: 0"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(574, 326)
 
 [connection signal="pressed" from="Draw Button" to="." method="draw_dice"]
 [connection signal="pressed" from="Roll Dice" to="." method="roll_dice"]
