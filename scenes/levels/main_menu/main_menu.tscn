@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cwu8q7smbafa0"]
 
 [ext_resource type="Script" uid="uid://cyikye637w6j4" path="res://scenes/levels/main_menu/main_menu.gd" id="1_6wim1"]
-[ext_resource type="PackedScene" uid="uid://cdadbppsq2ayu" path="res://scenes/levels/test_roll_die/test.tscn" id="2_d6m5w"]
+[ext_resource type="PackedScene" uid="uid://b1yb6uhufpxvf" path="res://scenes/levels/game/game.tscn" id="2_d6m5w"]
 [ext_resource type="Texture2D" uid="uid://canqfp4c203dj" path="res://assets/sprites/backgrounds/menu-background.png" id="2_lr4ss"]
 
 [sub_resource type="SystemFont" id="SystemFont_leamy"]

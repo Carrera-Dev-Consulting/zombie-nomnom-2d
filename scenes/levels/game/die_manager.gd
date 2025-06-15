@@ -9,7 +9,7 @@ extends Node
 @export var columns := 3
 @export var SIZE := 64
 @export var score_label: Label
-@export var winner_screen: PackedScene
+@export_file("*.tscn") var winner_screen
 
 signal has_player_died
 
@@ -171,6 +171,6 @@ func reset_player():
 func go_to_game_won_screen():
 	if winner_screen:
 		print("Winner Screen")
-		get_tree().change_scene_to_packed(winner_screen)
+		get_tree().change_scene_to_file(winner_screen)
 	else:
 		score_label.text = "You Won!!!"
