@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DieFace" load_steps=3 format=3 uid="uid://bhfm7wux3qneo"]
+
+[ext_resource type="PackedScene" uid="uid://dm2e7e117lvr7" path="res://scenes/entities/dice/brains/red_brain.tscn" id="1_wyl3i"]
+[ext_resource type="Script" uid="uid://dm3bc3k8knpbo" path="res://resources/dice/die.gd" id="2_cfhms"]
+
+[resource]
+script = ExtResource("2_cfhms")
+face = ExtResource("1_wyl3i")
+total_brains = 1
+total_shots = 0
+is_reroll_die = false
+metadata/_custom_type_script = "uid://dm3bc3k8knpbo"

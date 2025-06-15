@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=3 uid="uid://b1yb6uhufpxvf"]
+
+[ext_resource type="Script" uid="uid://c7t1kabvxvwr0" path="res://scenes/levels/game/die_manager.gd" id="1_te8yy"]
+[ext_resource type="Resource" uid="uid://dhq15qpnc8tai" path="res://resources/dice/basic_bag.tres" id="2_fw67w"]
+[ext_resource type="PackedScene" uid="uid://cwu8q7smbafa0" path="res://scenes/levels/main_menu/main_menu.tscn" id="3_fw67w"]
+[ext_resource type="PackedScene" uid="uid://ho6cycahvuei" path="res://scenes/entities/dice/dice.tscn" id="3_si6nn"]
+
+[sub_resource type="Gradient" id="Gradient_5kxba"]
+colors = PackedColorArray(0.33, 0.66, 0.33, 1, 0, 0.203922, 0.168627, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bw3ck"]
+gradient = SubResource("Gradient_5kxba")
+width = 1150
+height = 650
+fill_from = Vector2(0.447826, 0.0173913)
+
+[sub_resource type="SystemFont" id="SystemFont_si6nn"]
+font_names = PackedStringArray("Consolas")
+
+[sub_resource type="SystemFont" id="SystemFont_fw67w"]
+font_names = PackedStringArray("Consolas")
+
+[node name="Game" type="Node" node_paths=PackedStringArray("hand_dice", "dice_container", "score_label")]
+script = ExtResource("1_te8yy")
+bag = ExtResource("2_fw67w")
+hand_dice = [NodePath("dice"), NodePath("dice2"), NodePath("dice3")]
+dice_container = NodePath("DiceContainer")
+score_label = NodePath("Label")
+winner_screen = ExtResource("3_fw67w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(575, 325)
+texture = SubResource("GradientTexture2D_bw3ck")
+
+[node name="DiceContainer" type="Node2D" parent="."]
+position = Vector2(639, 105)
+
+[node name="dice" parent="." instance=ExtResource("3_si6nn")]
+position = Vector2(179, 138)
+scale = Vector2(3, 3)
+
+[node name="dice2" parent="." instance=ExtResource("3_si6nn")]
+position = Vector2(178, 280)
+scale = Vector2(3, 3)
+
+[node name="dice3" parent="." instance=ExtResource("3_si6nn")]
+position = Vector2(175, 426)
+scale = Vector2(3, 3)
+
+[node name="Draw Button" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 309.0
+offset_top = 120.0
+offset_right = 508.0
+offset_bottom = 194.0
+theme_override_fonts/font = SubResource("SystemFont_si6nn")
+theme_override_font_sizes/font_size = 32
+text = "Draw Dice"
+
+[node name="Roll Dice" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 305.0
+offset_top = 250.0
+offset_right = 504.0
+offset_bottom = 324.0
+theme_override_fonts/font = SubResource("SystemFont_si6nn")
+theme_override_font_sizes/font_size = 32
+text = "Roll Dice"
+
+[node name="Next Turn" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 307.0
+offset_top = 390.0
+offset_right = 506.0
+offset_bottom = 464.0
+theme_override_fonts/font = SubResource("SystemFont_si6nn")
+theme_override_font_sizes/font_size = 32
+text = "Score Brains"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 281.0
+offset_top = 17.0
+offset_right = 562.0
+offset_bottom = 82.0
+theme_override_fonts/font = SubResource("SystemFont_fw67w")
+theme_override_font_sizes/font_size = 64
+text = "Score: 0"
+
+[connection signal="pressed" from="Draw Button" to="." method="draw_dice"]
+[connection signal="pressed" from="Roll Dice" to="." method="roll_dice"]
+[connection signal="pressed" from="Next Turn" to="." method="reset_player"]
