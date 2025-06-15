@@ -13,4 +13,5 @@ ExtResource("2_mgume"): 1,
 ExtResource("3_h2ti1"): 2,
 ExtResource("4_2jt8s"): 3
 })
+current_face = ExtResource("2_mgume")
 metadata/_custom_type_script = "uid://p12kf06uva0t"

@@ -13,4 +13,5 @@ ExtResource("2_folia"): 2,
 ExtResource("3_ne51e"): 2,
 ExtResource("4_b4nf7"): 2
 })
+current_face = ExtResource("2_folia")
 metadata/_custom_type_script = "uid://p12kf06uva0t"
