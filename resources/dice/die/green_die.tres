@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Die" load_steps=6 format=3 uid="uid://chbqtemb17gvu"]
+
+[ext_resource type="Script" uid="uid://dm3bc3k8knpbo" path="res://resources/dice/die.gd" id="1_ep8ah"]
+[ext_resource type="Script" uid="uid://p12kf06uva0t" path="res://resources/dice/dice.gd" id="1_keyfu"]
+[ext_resource type="Resource" uid="uid://drxa23lt684h0" path="res://resources/dice/faces/green_brain.tres" id="2_ox588"]
+[ext_resource type="Resource" uid="uid://j75r3wudohye" path="res://resources/dice/faces/green_run.tres" id="3_3nbc1"]
+[ext_resource type="Resource" uid="uid://bqo7gvejbu0ak" path="res://resources/dice/faces/green_shot.tres" id="4_iwl4c"]
+
+[resource]
+script = ExtResource("1_keyfu")
+faces = Dictionary[ExtResource("1_ep8ah"), int]({
+ExtResource("2_ox588"): 3,
+ExtResource("3_3nbc1"): 2,
+ExtResource("4_iwl4c"): 1
+})
+metadata/_custom_type_script = "uid://p12kf06uva0t"
