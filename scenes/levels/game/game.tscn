@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1yb6uhufpxvf"]
+[gd_scene load_steps=8 format=3 uid="uid://b1yb6uhufpxvf"]
 
 [ext_resource type="Script" uid="uid://c7t1kabvxvwr0" path="res://scenes/levels/game/die_manager.gd" id="1_te8yy"]
 [ext_resource type="Resource" uid="uid://dhq15qpnc8tai" path="res://resources/dice/basic_bag.tres" id="2_fw67w"]
-[ext_resource type="PackedScene" uid="uid://cwu8q7smbafa0" path="res://scenes/levels/main_menu/main_menu.tscn" id="3_fw67w"]
 [ext_resource type="PackedScene" uid="uid://ho6cycahvuei" path="res://scenes/entities/dice/dice.tscn" id="3_si6nn"]
 
 [sub_resource type="Gradient" id="Gradient_5kxba"]
@@ -26,7 +25,7 @@ bag = ExtResource("2_fw67w")
 hand_dice = [NodePath("dice"), NodePath("dice2"), NodePath("dice3")]
 dice_container = NodePath("DiceContainer")
 score_label = NodePath("Label")
-winner_screen = ExtResource("3_fw67w")
+winner_screen = "uid://cwu8q7smbafa0"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(575, 325)
